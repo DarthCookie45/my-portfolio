@@ -4,7 +4,15 @@
 
 .profile-img {
   aspect-ratio: 1 / 1;
+
+  margin: 0 auto;
 }
+
+.sidebar a {
+  word-break: normal;
+  overflow-wrap: anywhere;
+}
+
 
 /* Center nav links vertically and add padding */
 .navbar .nav-link {
@@ -29,7 +37,7 @@
 }
 
 /* Mobile: sidebar becomes normal content */
-@media (max-width: 767.98px) {
+@media (max-width: 767px) {
   .sidebar {
     position: static;
     height: auto;
@@ -37,5 +45,10 @@
 
   .content-area {
     margin-left: 0;
+  }
+
+  .profile-img {
+    width: 45%;
+    max-width: 130px;
   }
 }
