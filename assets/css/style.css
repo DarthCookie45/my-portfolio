@@ -1,0 +1,41 @@
+.content-area {
+  min-height: 100vh;
+}
+
+.profile-img {
+  aspect-ratio: 1 / 1;
+}
+
+/* Center nav links vertically and add padding */
+.navbar .nav-link {
+  padding: 0.75rem 0;
+}
+
+/* Adjust padding for nav links to balance icon and text spacing */
+.navbar .nav-link {
+  padding: 0.75rem 0.5rem;
+}
+
+/* Desktop: fixed sidebar */
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    height: 100vh;
+  }
+
+  .content-area {
+    margin-left: 25%;
+  }
+}
+
+/* Mobile: sidebar becomes normal content */
+@media (max-width: 767.98px) {
+  .sidebar {
+    position: static;
+    height: auto;
+  }
+
+  .content-area {
+    margin-left: 0;
+  }
+}
