@@ -7,7 +7,7 @@
 --bg-sidebar: #eef2f6;  /* sidebar */
 
 --text-primary: #1f2933;
---text-secondary: #5a606b;
+--text-secondary: #5a606b; 
 
 --accent: #3b82f6;      /* blue */
 }
@@ -87,6 +87,9 @@ a:hover {
   background-color: var(--bg-light);
 }
 
+.em-class {
+  color: var(--text-secondary);
+}
 
 /* Center nav links vertically and add padding */
 .navbar .nav-link {
