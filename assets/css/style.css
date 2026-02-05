@@ -1,16 +1,86 @@
+:root {
+--bg-dark: #1f2933;     /* navbar */
+--bg-light: #f8fafc;    /* main content */
+--bg-sidebar: #eef2f6;  /* sidebar */
+
+--text-primary: #1f2933;
+--text-secondary: #5a606b;
+
+--accent: #3b82f6;      /* blue */
+}
+
+body {
+  color: var(--text-primary);
+}
+
+.navbar {
+  background-color: var(--bg-dark) !important;
+}
+
+.navbar .nav-link {
+  color: #cbd5e1; /* light grey */
+}
+
+.navbar .nav-link:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.navbar .nav-link.active {
+  color: var(--accent);
+}
+
+.navbar .nav-link.active i {
+  color: var(--accent);
+}
+
+.sidebar {
+  background-color: var(--bg-sidebar) !important;
+  color: var(--text-primary);
+  border-right: 1px solid #e5e7eb;
+}
+
+.sidebar h2 {
+  color: var(--text-primary);
+}
+
+.sidebar p, .sidebar li {
+  color: var(--text-secondary);
+}
+
 .content-area {
   min-height: 100vh;
 }
 
+.content-area h1 {
+  color: var(--text-primary) !important;
+}
+
 .profile-img {
   aspect-ratio: 1 / 1;
-
   margin: 0 auto;
 }
 
 .sidebar a {
   word-break: normal;
   overflow-wrap: anywhere;
+}
+
+.colour {
+  color: var(--text-primary) !important;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.page-content {
+  background-color: var(--bg-light);
 }
 
 
