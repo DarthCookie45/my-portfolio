@@ -19,6 +19,7 @@ body {
 
 .navbar {
   background-color: var(--bg-dark) !important;
+  z-index: 1;
 }
 
 .navbar .nav-link {
@@ -91,7 +92,43 @@ a:hover {
   color: var(--text-secondary);
 }
 
-/* Center nav links vertically and add padding */
+.card h5 {
+  color: var(--text-primary);
+}
+
+.card p {
+  color: var(--text-secondary);
+}
+
+.btn-primary {
+  background-color: var(--accent);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent);
+}
+
+.btn-outline {
+  color: var(--text-secondary);
+  border: 1px solid var(--text-secondary);
+}
+
+.btn-outline:hover {
+  color: var(--text-secondary);
+  border: 1px solid var(--text-secondary);
+}
+
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+  border: 1px solid lightgrey;
+}
+
+.card-body {
+  border: 1px solid lightgrey;
+}
+
+/* Center nav links and add padding */
 .navbar .nav-link {
   padding: 0.75rem 0;
 }
