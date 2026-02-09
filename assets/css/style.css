@@ -128,6 +128,16 @@ a:hover {
   border: 1px solid lightgrey;
 }
 
+.contact-form {
+  background-color: var(--bg-light);
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.contact-form .form-label {
+  font-weight: 500;
+}
+
 /* Center nav links and add padding */
 .navbar .nav-link {
   padding: 0.75rem 0;

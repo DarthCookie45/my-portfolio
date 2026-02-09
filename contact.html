@@ -135,16 +135,113 @@
           </div>
 
           <!-- Page Content -->
-          <section class="p-4">
-            <h1 class="mb-3">Contact Me</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum,
-              aut. Rerum unde minima perspiciatis velit totam id, dignissimos
-              sapiente enim praesentium earum laboriosam dolor? Dolores alias
-              unde reprehenderit laborum eum!
+          <section class="container section p-4">
+            <h1 class="text-center my-3">Contact Me</h1>
+            <p class="text-center text-muted mb-5">
+              If you'd like to discuss opportunities, projects or just have a
+              question, please feel free to get in touch using the form below.
             </p>
+
+            <form class="mx-auto contact-form" style="max-width: 600px">
+              <!-- Full Name -->
+              <div class="mb-3">
+                <label for="fullName" class="form-label">Full Name *</label>
+                <input
+                  type="text"
+                  class="form-control w-100"
+                  id="fullName"
+                  name="fullName"
+                  placeholder="Jane Smith"
+                  required
+                />
+              </div>
+
+              <!-- Company Name -->
+              <div class="mb-3">
+                <label for="companyName" class="form-label"
+                  >Company Name
+                  <span class="text-muted">(optional)</span></label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="companyName"
+                  name="companyName"
+                  placeholder="Company Ltd"
+                />
+              </div>
+
+              <!-- Email Address -->
+              <div class="mb-3">
+                <label for="email" class="form-label">Email Address *</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="jane.smith@email.com"
+                  required
+                />
+              </div>
+
+              <!-- Message -->
+              <div class="mb-3">
+                <label for="message" class="form-label">Message *</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Write your message here..."
+                  required
+                >
+                </textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary btn-lg">
+                  Send Message
+                </button>
+              </div>
+            </form>
           </section>
         </main>
+      </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div
+      class="modal fade"
+      id="successModal"
+      tabindex="-1"
+      aria-labelledby="successModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="successModalLabel">Message Sent!</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Thank you for getting in touch! I'll respond as soon as possible.
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -154,6 +251,35 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("ugaOCJFOq6qeyp7OZ");
+      })();
+    </script>
+
+    <script>
+      const form = document.querySelector(".contact-form");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        emailjs
+          .sendForm("service_9x2sbdl", "template_w1g338j", this)
+          .then(() => {
+            const successModal = new bootstrap.Modal(
+              document.getElementById("successModal"),
+            );
+            successModal.show();
+            form.reset();
+          })
+          .catch((Error) => {
+            alert("Something went wrong. Please try again.");
+            console.error(error);
+          });
+      });
+    </script>
 
     <!-- Font Awesome -->
     <script
