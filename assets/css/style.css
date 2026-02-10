@@ -3,7 +3,6 @@
 
 :root {
 --bg-dark: #1f2933;     /* navbar */
---bg-light: #f8fafc;    /* main content */
 --bg-sidebar: #eef2f6;  /* sidebar */
 
 --text-primary: #1f2933;
@@ -57,8 +56,8 @@ body {
   min-height: 100vh;
 }
 
-.content-area h1 {
-  color: var(--text-primary) !important;
+h1 {
+  color: var(--accent);
 }
 
 .profile-img {
@@ -82,10 +81,6 @@ a {
 
 a:hover {
   text-decoration: underline;
-}
-
-.page-content {
-  background-color: var(--bg-light);
 }
 
 .em-class {
@@ -121,11 +116,11 @@ a:hover {
 .card-img-top {
   height: 180px;
   object-fit: cover;
-  border: 1px solid lightgrey;
+  border: 1px solid #eef2f6;
 }
 
 .card-body {
-  border: 1px solid lightgrey;
+  border: 1px solid #eef2f6;
 }
 
 .contact-form {
@@ -137,6 +132,31 @@ a:hover {
 .contact-form .form-label {
   font-weight: 500;
 }
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.role-title {
+  font-weight: 500;
+  color: var(--text-primary);
+  animation: accentPulse 5s ease-in-out infinite;
+}
+
+@keyframes accentPulse {
+  0% {
+    color: var(--text-primary);
+  }
+  50% {
+    color: var(--accent);
+  }
+  100% {
+    color: var(--text-primary);
+  }
+}
+
 
 /* Center nav links and add padding */
 .navbar .nav-link {
