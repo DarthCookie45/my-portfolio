@@ -61,7 +61,12 @@ h1 {
 }
 
 .profile-img {
-  aspect-ratio: 1 / 1;
+  display: block;
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--accent);
   margin: 0 auto;
 }
 
