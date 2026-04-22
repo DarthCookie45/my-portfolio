@@ -162,6 +162,25 @@ a:hover {
   }
 }
 
+.video-section {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
 
 /* Center nav links and add padding */
 .navbar .nav-link {
