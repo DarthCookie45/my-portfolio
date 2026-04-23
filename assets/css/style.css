@@ -181,6 +181,10 @@ a:hover {
   border-radius: 12px;
 }
 
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
 
 /* Center nav links and add padding */
 .navbar .nav-link {
