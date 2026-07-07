@@ -193,6 +193,61 @@ a:hover {
   font-weight: 600;
 }
 
+.cv-download-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.2rem;
+  border-radius: 8px;
+  background-color: #0d6efd;
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.cv-download-btn:hover {
+  background-color: #0b5ed7;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.project-tech {
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+}
+
+.card .project-tech {
+  color: var(--accent);
+}
+
+.project-image-wrapper {
+  position: relative;
+}
+
+.featured-badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background-color: #ffc107;
+  color: #111;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.featured-card {
+    border: 3px solid var(--accent);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transition: all 0.25s ease;
+}
+
+.featured-card:hover {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+}
+
 /* Center nav links and add padding */
 .navbar .nav-link {
   padding: 0.75rem 0;
